@@ -6,13 +6,18 @@
   <title>To-do List</title>
 </head>
 <body>
-  <h1>Lista de Tareas</h1>
-  <form id="taskForm">
-    <input type="text" id="taskInput" placeholder="Escriba la tarea">
-    <button type="submit">Añadir</button>
-  </form>
+  <div class="container">
+    <h1>Lista de Tareas</h1>
+    <form id="taskForm">
+      <div>
+        <label for="taskInput">Añadir Tarea</label>
+        <input type="text" id="taskInput" placeholder="Escriba la tarea">
+      </div>
+      <button type="submit">Añadir</button>
+    </form>
 
-  <ul id="taskList"></ul>
+    <ul id="taskList"></ul>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

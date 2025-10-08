@@ -1,4 +1,4 @@
-export {addTask, getTasks};
+export {addTask, getTasks, toggleTask,deleteTask};
 let task = [];
 
 const addTask = (description) => {
@@ -9,9 +9,22 @@ const addTask = (description) => {
     description: description.trim(),
     completed: false,
   });
-  console.log('ejecutado');
+  
 };
 
 const getTasks = () =>{
     return [...task]; //devolvemos una copia del array de tareas
 };
+
+const toggleTask = (id) => {
+  let foundTask = task.find(task => task.id === id);
+  if (foundTask) {
+    foundTask.completed = !foundTask.completed;
+  }
+};
+
+const deleteTask = (id) => {
+  task = task.filter(task => task.id !== id);
+}
+
+
